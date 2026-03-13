@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "738918661882",
+    "project_id": "healeasy-eea44",
+    "storage_bucket": "healeasy-eea44.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738918661882:android:742a44c007ca17d5e45343",
+        "android_client_info": {
+          "package_name": "com.example.healeasy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcRHHSwU_YO3rFD-8skrpWnN8CVAOMfwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
