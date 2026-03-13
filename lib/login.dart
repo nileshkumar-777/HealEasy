@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:healeasy/home_screen.dart';
+import 'package:healeasy/screens/visit_list_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
+        MaterialPageRoute(builder: (_) => const VisitListScreen()),
       );
     } catch (error) {
       ScaffoldMessenger.of(
@@ -64,7 +64,7 @@ class _MainScreenState extends State<MainScreen> {
                 width: 160,
                 height: 160,
                 decoration: const BoxDecoration(
-                  color: Color(0xFFF06292),
+                  color: Color.fromARGB(255, 163, 95, 219),
                   shape: BoxShape.circle,
                 ),
               ),
@@ -77,7 +77,7 @@ class _MainScreenState extends State<MainScreen> {
                 width: 200,
                 height: 200,
                 decoration: const BoxDecoration(
-                  color: Color(0xFFF06292),
+                  color: Color.fromARGB(255, 99, 197, 221),
                   shape: BoxShape.circle,
                 ),
               ),

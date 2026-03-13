@@ -2,11 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:healeasy/loading.dart';
 import 'package:healeasy/login.dart';
+import 'package:healeasy/screens/visit_list_screen.dart';
+import 'package:healeasy/screens/create_visit_screen.dart';
 import 'firebase_options.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // Initialize Hive (local database)
+  await Hive.initFlutter();
+
+  // Open box for storing visits
+  await Hive.openBox('visits');
+
   runApp(const MyApp());
 }
 
@@ -36,7 +48,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Sales Logger",
-      theme: ThemeData(primarySwatch: Colors.pink),
+      theme: ThemeData(primarySwatch: Colors.red),
+
+      // App Routes
+      routes: {
+        "/visits": (context) => const VisitListScreen(),
+        "/createVisit": (context) => const CreateVisitScreen(),
+      },
+
       home: _isLoading ? const HopeLoadingScreen() : const MainScreen(),
     );
   }
