@@ -52,8 +52,8 @@ class _MyAppState extends State<MyApp> {
 
       // App Routes
       routes: {
-        "/visits": (context) => const VisitListScreen(),
-        "/createVisit": (context) => const CreateVisitScreen(),
+        "/visits": (context) => const VisitLogsScreen(),
+        "/createVisit": (context) => const CreateVisitLogScreen(),
       },
 
       home: _isLoading ? const HopeLoadingScreen() : const MainScreen(),

@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const VisitListScreen()),
+        MaterialPageRoute(builder: (_) => const VisitLogsScreen()),
       );
     } catch (error) {
       ScaffoldMessenger.of(
